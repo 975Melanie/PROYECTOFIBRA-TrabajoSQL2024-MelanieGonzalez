@@ -19,22 +19,28 @@ Descripción del Problema:
 **Principales elementos de la base de datos:** 
 **Tablas:** 
 1.	*Clientes:* 
-Almacena la información de los clientes a los que vendemos los productos. 
+Almacena la información de los clientes a los que vendemos los productos.
+
 Atributos: IDcliente, cliente, mail, teléfono, país. 
 3.	*Productos:*
 Contiene la información de los productos de fibra óptica disponibles para comprar y vender. 
+
 Atributos: IDproducto, nombre, categoría, tipo, precio. 
 4.	*Proveedores:*
 Almacena la información de los proveedores a los que compramos los productos. 
+
 Atributos: IDproveedor, proveedor, mail, teléfono, Condición_de_pago
 5.	*Usuarios:*
 Contiene información sobre los empleados involucrados en las operaciones y sus procesos. 
-IDusuario, mail, teléfono, sector.
+
+Atributos: IDusuario, mail, teléfono, sector.
 6.	*Ventas:*
 Registra las operaciones de venta hechas a los clientes. 
+
 Atributos: IDventa, cliente, precio, producto
 7.	*Compras*
 Registra las operaciones de venta hechas a los clientes. 
+
 Atributos: IDcompra, proveedor, precio, producto, condición de pago. 
 8.	*Facturas_ventas:*
 
