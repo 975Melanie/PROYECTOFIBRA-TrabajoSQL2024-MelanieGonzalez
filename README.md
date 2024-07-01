@@ -55,4 +55,6 @@ Atributos: IDcompra, proveedor, precio, producto, condición de pago.
 *En resumen, esta base de datos proporciona una estructura para organizar, analizar y gestionar eficientemente las operaciones de compra y venta de productos de fibra óptica, lo que permite una mejor toma de decisiones del nuevo negocio y poder analizar la evolución del mismo.*
 
 **PROYECTO FIBRA ÓPTICA**
+
+
 **DER SIMPLIFICADO**
