@@ -1,6 +1,6 @@
 # Primer-Entregable-SQL-Coder-House
 
-CREACION BASE DE DATOS PARA EL SEGUIMIENTO DE UN NEGOCIO DE FIBRA ÓPTICA
+CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA ÓPTICA
 
 **Problema:** Una empresa nueva de fibra óptica está iniciando su desarrollo en el negocio. Para ello se implementó un sistema de gestión de ventas y surge la necesidad urgente de realizar informes para el análisis y gestión de objetivos para las distintas áreas y la toma de decisiones por parte de la Dirección. 
 
