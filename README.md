@@ -76,3 +76,7 @@ Atributos: IDcompra, proveedor, precio, producto, condición de pago.
 
 
 **DER SIMPLIFICADO**
+
+
+![image](https://github.com/975Melanie/Primer-Entregable-SQL-Coder-House/assets/174355624/dc5d4561-5c92-49b8-a91b-326b50d0cc44)
+![image](https://github.com/975Melanie/Primer-Entregable-SQL-Coder-House/assets/174355624/dc5d4561-5c92-49b8-a91b-326b50d0cc44)
