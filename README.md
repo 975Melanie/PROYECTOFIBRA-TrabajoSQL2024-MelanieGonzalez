@@ -11,7 +11,7 @@ CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA Ó
   
 * Gestión de Productos: Se necesita tener la información de los productos que se utilizarán para las distintas operaciones, ayudando a organizar mejor el flujo de trabajo y adaptar nuestros servicios según las necesidades del cliente con la administración y creación de los mismos.
   
-  * Registro de Compras y Ventas: Necesitamos un sistema que pueda registrar de manera detallada y dinámica cada compra y venta realizadas, incluyendo la fecha de creación, el cliente al que se le vendió, el proveedor al que se le compró, el producto, el vendedor que realizó la operación y el estado de las mismas.
+* Registro de Compras y Ventas: Necesitamos un sistema que pueda registrar de manera detallada y dinámica cada compra y venta realizadas, incluyendo la fecha de creación, el cliente al que se le vendió, el proveedor al que se le compró, el producto, el vendedor que realizó la operación y el estado de las mismas.
     
 * Registro de Facturas: Es de suma importancia poder registrar de manera detallada cada factura generada a partir de las operaciones de compra y venta, incluyendo fecha de creación, orden vendida o comprada, su monto y el vendedor que generó dicha facturación. 
   
