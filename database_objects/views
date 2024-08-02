@@ -1,0 +1,18 @@
+--Visualizar las 5 ventas de mayor valor
+
+CREATE VIEW TopCincoVentas AS
+SELECT
+ ID_VENTA,
+ ID_CLIENTE
+FROM ORDEN_VENTA
+ORDER BY MONTO DESC
+LIMIT 5;
+
+--Visualizar los 10 productos más vendidos
+
+CREATE VIEW ProductosMasVendidos AS
+SELECT 
+ID_PRODUCTO
+FROM ORDEN_VENTA
+ORDER BY CANTIDAD DESC
+LIMIT 10;
