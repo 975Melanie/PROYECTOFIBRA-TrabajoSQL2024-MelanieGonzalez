@@ -96,14 +96,46 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 ![image](https://github.com/975Melanie/Primer-Entregable-SQL-Coder-House/assets/174355624/dc5d4561-5c92-49b8-a91b-326b50d0cc44)
 
-#**SEGUNDA PARTE DE LA ENTREGA**
+**SEGUNDA PARTE DE LA ENTREGA**
 
-*
-Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
-*
-Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
-*
-Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
-*
-Listado de Triggers
+*Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+
+*Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
+
+*Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
+
+*Listado de Triggers
+
+***Documentacion de Vistas***
+**VISTA: TopCincoVentas**
+Esta vista muestra las 5 ventas de mayor valor y su cliente. El objetivo es poder detectar qué clientes son los que generan mayores ingresos. 
+
+**VISTA: ProductosMasVendidos**
+Esta vista nos permite visualizar una lista de los 10 productos más vendidos. La idea es poder detectar qué productos son los que generan mayores ingresos al proyecto. 
+
+
+
+**#Documentación de Funciones#**
+
+ **FUNCIÓN: CalcularRentabilidad**
+ Esta función calcula la rentabilidad generada a partir de las ventas. La idea es poder visualizar las ganancias descontando los costos de los productos vendidos. 
+
+ **FUNCIÓN: CalcularComision**
+Esta función calcula la comisión que le corresponde cobrar a cada vendedor por cada venta realizada. La comisión corresponde al 5% del monto total de cada venta. 
+
+**#Documentación de Procedimientos Almacenados#**
+
+**PROCEDIMIENTO: RegistrarVenta**
+Este procedimiento registra las ventas nuevas, su monto total y genera la factura a partir de la misma. 
+
+Parámetros: id_producto, id_cliente, precio_venta, cantidad, id_vendedor, fecha DATE. 
+
+Retorno: Monto, Factura_venta
+
+**##Documentación de Triggers##**
+
+**TRIGGER: ModificacionFactura**
+Este trigger permite auditar las modificaciones realizadas en las facturas, visualizando el usuario que efectuó la modificación. 
+
+
 
