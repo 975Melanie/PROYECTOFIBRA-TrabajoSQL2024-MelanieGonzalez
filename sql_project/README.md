@@ -96,3 +96,10 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 ![image](https://github.com/975Melanie/Primer-Entregable-SQL-Coder-House/assets/174355624/dc5d4561-5c92-49b8-a91b-326b50d0cc44)
 
+#**SEGUNDA PARTE DE LA ENTREGA**
+
+*Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+*Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
+*Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
+*Listado de Triggers
+
