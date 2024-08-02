@@ -1,0 +1,30 @@
+DROP FUNCTION IF EXISTS CalcularRentabilidad;
+DELIMITER //
+--Calcular la rentabilidad a partir de los ingresos y los egresos de las ventas
+
+CREATE FUNCTION CalcularRentabilidad() RETURNS DECIMAL
+BEGIN
+DECLARE total_ventas DECIMAL;
+DECLARE total_compras DECIMAL;
+DECLARE rentabilidad DECIMAL;
+SELECT SUM(MONTO) INTO total_ventas FROM FACTURAS_VENTAS;
+SELECT SUM(MONTO) INTO total_compras FROM FACTURAS_COMPRAS;
+SET rentabilidad = total_ventas - total_compras;
+RETURN rentabilidad;
+END //
+DELIMITER ;
+
+-- Calcular el 5% de cada venta como comisión para cada vendedor 
+
+DROP FUNCTION IF EXISTS CalcularComision
+DELIMITER //
+CREATE FUNCTION CalcularComision(ID_VENTA INT) RETURNS DECIMAL
+BEGIN DECLARE monto_venta DECIMAL;
+DECLARE comision DECIMAL;
+SELECT MONTO INTO monto_venta FROM FACTURAS_VENTAS
+WHERE ID_VENTA = ID_VENTA;
+SET comision = monto_venta * 0.05;
+
+RETURN comision;
+END
+// DELIMITER ;
