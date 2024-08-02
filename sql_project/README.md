@@ -98,8 +98,12 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 #**SEGUNDA PARTE DE LA ENTREGA**
 
-*Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
-*Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
-*Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
-*Listado de Triggers
+*
+Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+*
+Listado de Funciones que incluyan una descripción detallada, el objetivo para la cual fueron creadas y qué datos o tablas manipulan y/o son implementadas.
+*
+Listado de Stored Procedures con una descripción detallada, qué objetivo o beneficio aportan al proyecto, y las tablas que lo componen y/o tablas con las que interactúa
+*
+Listado de Triggers
 
