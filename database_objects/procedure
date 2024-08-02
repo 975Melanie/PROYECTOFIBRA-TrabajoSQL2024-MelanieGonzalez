@@ -1,0 +1,21 @@
+-- Proceso para registrar las nuevas ventas, calcular su monto total y generar la factura a partir de ellas
+
+DELIMITER //
+CREATE PROCEDURE RegistrarVenta(
+IN id_producto INT,
+IN id_cliente INT,
+IN precio_venta INT,
+IN cantidad INT,
+IN id_vendedor INT,
+IN fecha DATE
+)
+BEGIN
+DECLARE ID_VENTA INT;
+DECLARE MONTO DECIMAL(10,2);
+SET MONTO = cantidad*precio_venta;
+INSERT INTO ORDEN_VENTA (ID_PRODUCTO, ID_CLIENTE, PRECIO_VENTA,CANTIDAD,ID_VENDEDOR,
+FECHA) VALUES (id_producto,id_cliente,precio_venta,cantidad,id_vendedor,fecha);
+SET ID_VENTA = LAST_INSERT_ID();
+INSERT INTO FACTURAS_VENTAS (ID_VENTA, MONTO, ID_VENDEDOR, FECHA)
+VALUES (ID_VENTA,MONTO,id_vendedor,fecha);
+END; // DELIMITER ;
