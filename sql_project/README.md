@@ -29,7 +29,7 @@ CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA Ó
 1.	**PRODUCTOS:**
 Contiene la información de los productos de fibra óptica disponibles para comprar y vender. 
 
-Atributos: ID_PRODUCTO, ITEM, PRECIO_VENTA, PRECIO_COMPRA, FECHA_CREACION. 
+Atributos: ID_PRODUCTO, ITEM, PRECIO_VENTA, PRECIO_COMPRA. 
 
 2.	**CLIENTES:**
 Almacena la información de los clientes a los que se venden los productos.
@@ -45,32 +45,32 @@ Atributos: ID_PROVEEDOR, PROVEEDOR, TELEFONO, MAIL.
 4.	**ORDEN_VENTA:**
 Registra las operaciones de venta realizadas a los clientes. 
 
-Atributos: ID_VENTA, ID_PRODUCTO, ID_CLIENTE, PRECIO_VENTA, ID_VENDEDOR, FECHA.
+Atributos: ID_VENTA, ID_PRODUCTO, ID_CLIENTE, PRECIO_VENTA, CANTIDAD, MONTO, ID_VENDEDOR, FECHA.
 
 5.	**ORDEN_COMPRA**
 Registra las operaciones de compra realizadas a los proveedores. 
 
-Atributos: ID_COMPRA, ID_PRODUCTO, ID_PROVEEDOR, PRECIO_COMPRA, FECHA.
+Atributos: ID_COMPRA, ID_PRODUCTO, ID_PROVEEDOR, PRECIO_COMPRA,CANTIDAD, MONTO, FECHA.
 
 6.	**FACTURAS_VENTAS**
 Víncula las facturas realizas sobre las ventas de los clientes.
 
-Atributos: ID_FCVENTA, ID_VENTA, MONTO, ID_VENDEDOR, FECHA.
+Atributos: ID_FCVENTA, ID_VENTA, MONTO, ID_VENDEDOR, FECHA_FACTURA.
 
 7.	**FACTURAS_COMPRAS**
 Víncula las facturas recibidas sobre las compras realizadas a los proveedores.
 
-Atributos:ID_FCCOMPRA, ID_COMPRA, MONTO, FECHA.
+Atributos:ID_FCCOMPRA, ID_COMPRA, MONTO, FECHA_FACTURA.
 
 8.	**COBROS**
 Vincula los cobros recibidos a las facturas correspondientes a las operaciones de venta.
 
- Atributos: ID_COBRO, ID_FCVENTA, MONTO, FECHA.
+ Atributos: ID_COBRO, ID_FCVENTA, MONTO, FECHA_COBRO.
     
 9.	**PAGOS**
 Vincula los pagos realizados por la empresa con las operaciones de compra.
 
-Atributos: ID_PAGO, ID_FCCOMPRA, MONTO, FECHA.
+Atributos: ID_PAGO, ID_FCCOMPRA, MONTO, FECHA_PAGO.
 
 10.	**VENDEDORES:**
 Contiene información sobre los vendedores de la empresa involucrados en las operaciones de venta.
@@ -100,7 +100,7 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 **SEGUNDA PARTE DE LA ENTREGA**
 
 
-* Listado de Vistas más una descripción detallada, su objetivo, y qué tablas las componen.
+* Listado de Vistas más una descripción, su objetivo, y qué tablas las componen.
 
 
 
@@ -119,9 +119,16 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 Esta vista muestra las 5 ventas de mayor valor y su cliente. El objetivo es poder detectar qué clientes son los que generan mayores ingresos. 
 
+TABLA: ORDEN_VENTA
+COLUMNAS: ID_VENTA, ID_CLIENTE. 
+
+
 *VISTA: ProductosMasVendidos*
 
 Esta vista nos permite visualizar una lista de los 10 productos más vendidos. La idea es poder detectar qué productos son los que generan mayores ingresos al proyecto. 
+
+TABLA: ORDEN_VENTA
+COLUMNAS: ID_PRODUCTO
 
 
 
@@ -151,6 +158,9 @@ Retorno: Monto, Factura_venta
 *TRIGGER: ModificacionFactura*
 
 Este trigger permite auditar las modificaciones realizadas en las facturas, visualizando el usuario que efectuó la modificación. 
+
+Tabla afectada: FACTURAS_VENTAS
+Acción: INSERT
 
 
 
