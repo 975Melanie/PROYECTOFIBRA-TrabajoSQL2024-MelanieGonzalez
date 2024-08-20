@@ -16,3 +16,17 @@ NOW()
 );
 END; DELIMITER;
 
+
+***********************************************************************************
+
+DELIMITER //
+
+CREATE TRIGGER AFTER_INSERT_ORDEN_COMPRA
+AFTER INSERT ON ORDEN_COMPRA
+FOR EACH ROW
+BEGIN
+    -- Llamar al procedimiento para generar la factura de compra
+    CALL GENERAR_FACTURA_COMPRA(NEW.ID_COMPRA);
+END //
+
+DELIMITER ;
