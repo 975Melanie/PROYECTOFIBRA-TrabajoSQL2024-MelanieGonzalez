@@ -19,3 +19,25 @@ SET ID_VENTA = LAST_INSERT_ID();
 INSERT INTO FACTURAS_VENTAS (ID_VENTA, MONTO, ID_VENDEDOR, FECHA)
 VALUES (ID_VENTA,MONTO,id_vendedor,fecha);
 END; // DELIMITER ;
+
+
+************************************************
+
+
+DELIMITER //
+
+CREATE PROCEDURE GENERAR_FACTURA_COMPRA(IN id_compra INT)
+BEGIN
+    DECLARE monto DECIMAL(10,2);
+
+    -- Obtener el monto total de la orden de compra
+    SELECT MONTO INTO monto
+    FROM ORDEN_COMPRA
+    WHERE ID_COMPRA = id_compra;
+
+    -- Insertar la factura de compra en la tabla FACTURAS_COMPRAS
+    INSERT INTO FACTURAS_COMPRAS (ID_COMPRA, MONTO, FECHA_FACTURA)
+    VALUES (id_compra, monto, CURDATE());
+END //
+
+DELIMITER ;
