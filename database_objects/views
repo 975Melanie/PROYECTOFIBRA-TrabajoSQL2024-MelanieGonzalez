@@ -16,3 +16,43 @@ ID_PRODUCTO
 FROM ORDEN_VENTA
 ORDER BY CANTIDAD DESC
 LIMIT 10;
+
+**************************************************************************
+-- Visualizar las facturas que no tienen cobros asociados
+
+CREATE VIEW FcSinCobrar AS
+SELECT 
+    ID_FCVENTA,
+    ID_VENTA,
+    MONTO AS MONTO_FACTURA,
+    ID_VENDEDOR,
+    FECHA_FACTURA
+FROM 
+    FACTURAS_VENTAS f
+LEFT JOIN 
+    COBROS c ON f.ID_FCVENTA = c.ID_FCVENTA
+WHERE 
+    c.ID_COBRO IS NULL;
+
+-- Detectar el vendedor con más cantidad de ventas realizadas
+
+CREATE VIEW MejorVendedor2024 AS
+SELECT 
+    v.ID_VENDEDOR,
+    v.NOMBRE,
+    SUM(o.MONTO) AS TOTAL_VENTAS
+FROM 
+    ORDEN_VENTA o
+JOIN 
+    VENDEDORES v ON o.ID_VENDEDOR = v.ID_VENDEDOR
+WHERE 
+    o.FECHA >= CURDATE() - INTERVAL 1 YEAR
+GROUP BY 
+    v.ID_VENDEDOR, v.NOMBRE
+ORDER BY 
+    TOTAL_VENTAS DESC
+LIMIT 1;
+
+
+
+
