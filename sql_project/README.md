@@ -24,7 +24,7 @@ CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA Ó
 
 **Principales elementos de la base de datos:** 
 
-**TABLAS:** 
+<**TABLAS:**> 
 
 1.	**PRODUCTOS:**
 Contiene la información de los productos de fibra óptica disponibles para comprar y vender. 
