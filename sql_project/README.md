@@ -40,7 +40,7 @@ Docente: Anderson Torres
 **Descripción de la Base de Datos:** Gestión de operaciones de compra y venta de productos de fibra óptica.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
-**Principales elementos de la base de datos:** 
+*PRINCIPALES ELEMENTOS DE LA BASE DE DATOS:*
 
 **TABLAS:**
 
