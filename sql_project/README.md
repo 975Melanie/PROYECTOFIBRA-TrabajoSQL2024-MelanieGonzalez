@@ -106,6 +106,8 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 *En resumen, esta base de datos proporciona una estructura para organizar, analizar y gestionar eficientemente las operaciones de compra y venta de productos de fibra óptica, lo que permite una mejor toma de decisiones del nuevo negocio y poder analizar la evolución del mismo.*
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 **PROYECTO FIBRA ÓPTICA**
 
 
@@ -113,6 +115,8 @@ Atributos: ID_VENDEDOR, NOMBRE, TELEFONO, CORREO.
 
 
 ![image](https://github.com/975Melanie/Primer-Entregable-SQL-Coder-House/assets/174355624/dc5d4561-5c92-49b8-a91b-326b50d0cc44)
+
+-----------------------------------------------------------------------------------------------------------------------------------------
 
 
 **SEGUNDA PARTE DE LA ENTREGA**
