@@ -17,7 +17,7 @@ Docente: Anderson Torres
 -----------------------------------------------------------------------------------------------------------------------------------------
 
 
-CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA ÓPTICA
+## CREACION BASE DE DATOS PARA EL ANÁLISIS Y SEGUIMIENTO DE UN NEGOCIO DE FIBRA ÓPTICA
 
 
 **Problema:** Una empresa nueva de fibra óptica está iniciando su desarrollo en el negocio. Para ello se implementó un sistema de gestión de ventas y surge la necesidad urgente de realizar análisis y seguimiento del negocio para la gestión de los objetivos y la toma de decisiones por parte de la Dirección. 
