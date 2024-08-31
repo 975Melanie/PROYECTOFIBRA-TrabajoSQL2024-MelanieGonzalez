@@ -153,6 +153,19 @@ TABLA: ORDEN_VENTA
 COLUMNAS: ID_PRODUCTO
 
 
+*VISTA: FcSinCobrar*
+Esta vista nos permite visualizar las facturas que no tienen cobros asociados para poder detectar rápidamente cuáles son las facturas que aún no se cobraron y poder hacer una planificación financiera. 
+
+TABLA: FACTURAS_VENTAS
+COLUMNAS: ID_FCVENTA, ID_COBRO.
+
+*VISTA: MejorVendedor2024*
+Devuelve el dato del vendedor con más ventas realizadas en el año 2024. 
+
+TABLA: ORDEN_VENTA
+COLUMNAS: TOTAL_VENTAS
+
+
 
 **Documentación de Funciones**
 
@@ -175,6 +188,15 @@ Parámetros: id_producto, id_cliente, precio_venta, cantidad, id_vendedor, fecha
 Retorno: Monto, Factura_venta
 
 
+*PROCEDIMIENTO: GENERAR_FACTURA_COMPRA*
+
+Este procedimiento genera las facturas de las compras nuevas. 
+
+Parámetros: ID_COMPRA, MONTO. 
+Retorno: ID_COMPRA, MONTO, FECHA_FACTURA.
+
+
+
 **Documentación de Triggers**
 
 *TRIGGER: ModificacionFactura*
@@ -185,4 +207,7 @@ Tabla afectada: FACTURAS_VENTAS
 Acción: INSERT
 
 
+*TRIGGER:AFTER_INSERT_ORDEN_COMPRA*
+
+Este trigger llama al procedimiento (GENERAR_FACTURA_COMPRA) para que se cree la factura de compra automáticamente cada vez que se agregue una nueva. 
 
